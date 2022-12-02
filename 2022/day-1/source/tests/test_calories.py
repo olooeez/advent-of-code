@@ -1,6 +1,6 @@
-from source.calories import get_most_calories
+from source.calories import get_top_tree_most_calories
 
-def test_get_most_calories() -> None:
+def test_get_top_tree_most_calories() -> None:
 	day_1_example = [
 		'1000', '2000', '3000',
 		None,
@@ -13,6 +13,6 @@ def test_get_most_calories() -> None:
 		'10000'
 	]
 
-	expected = 24000
+	expected = [24000, 11000, 10000]
 
-	assert get_most_calories(day_1_example) == expected
+	assert get_top_tree_most_calories(day_1_example) == expected

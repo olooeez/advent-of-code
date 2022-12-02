@@ -1,4 +1,4 @@
-from source.calories import get_most_calories
+from source.calories import get_top_tree_most_calories
 
 def get_calories_from_file(file_name :str) -> list:
     calories = []
@@ -13,10 +13,10 @@ def get_calories_from_file(file_name :str) -> list:
     return calories
 
 def main():
-    calories = get_calories_from_file(file_name='data/input.txt')
-    max_calories = get_most_calories(calories_list=calories)
+    calories = get_calories_from_file(file_name='./data/input.txt')
+    top_tree_calories = get_top_tree_most_calories(calories_list=calories)
 
-    print(f"The Elf carrying the most Calories is carrying {max_calories} Calories")
+    print(f"The top three Elves are carrying {sum(top_tree_calories)} Calories")
 
 if __name__ == '__main__':
     main()
